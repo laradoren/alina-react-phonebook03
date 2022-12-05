@@ -3,11 +3,11 @@ import css from './Phonebook.module.css';
 import PropTypes from 'prop-types';
 import { Section } from 'components/Section/Section';
 
-export const Phonebook = ({name, number, onAddContact, onChangeFiled}) => {
-    return (
-      <Section title={"Phonebook"}>
+export const Phonebook = ({ name, number, onAddContact, onChangeFiled }) => {
+  return (
+    <Section title={'Phonebook'}>
       <form>
-      <div className={css.label}>Name</div>
+        <div className={css.label}>Name</div>
         <input
           value={name}
           className={css.input}
@@ -31,15 +31,17 @@ export const Phonebook = ({name, number, onAddContact, onChangeFiled}) => {
           onChange={onChangeFiled}
         />
 
-        <button type='submit' onClick={onAddContact} className={css.button}>Add contact</button>
+        <button type="submit" onClick={onAddContact} className={css.button}>
+          Add contact
+        </button>
       </form>
-      </Section>
-    );
-}
+    </Section>
+  );
+};
 
 Phonebook.propTypes = {
   name: PropTypes.string.isRequired,
   number: PropTypes.string.isRequired,
   onAddContact: PropTypes.func.isRequired,
   onChangeFiled: PropTypes.func.isRequired,
-}
+};
